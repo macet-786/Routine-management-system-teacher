@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "title": "B.Tech 3rd Semester Exam Schedule Released",
+    "description": "The examination schedule for B.Tech 3rd semester has been published. All students are advised to check their respective timetables.",
+    "date": "2025-08-20",
+    "type": "exam",
+    "scope": ["btech"]
+  },
+  {
+    "id": "2", 
+    "title": "New Faculty Assignment - CSE Department",
+    "description": "Prof. Sharma has been assigned to CSE 1st Year for the subject Programming Fundamentals.",
+    "date": "2025-08-18",
+    "type": "faculty",
+    "scope": ["btech", "diploma"]
+  },
+  {
+    "id": "3",
+    "title": "Laboratory Equipment Maintenance",
+    "description": "Computer Lab will be under maintenance on August 25th. Classes will be rescheduled accordingly.",
+    "date": "2025-08-17",
+    "type": "maintenance",
+    "scope": ["btech", "diploma"]
+  },
+  {
+    "id": "4",
+    "title": "Holiday Notice - Independence Day",
+    "description": "College will remain closed on August 15th in observance of Independence Day.",
+    "date": "2025-08-14",
+    "type": "holiday",
+    "scope": ["btech", "diploma"]
+  },
+  {
+    "id": "5",
+    "title": "Semester Registration Open",
+    "description": "Registration for the upcoming semester is now open. Students must complete registration by August 30th.",
+    "date": "2025-08-12",
+    "type": "registration",
+    "scope": ["btech", "diploma"]
+  }
+]
