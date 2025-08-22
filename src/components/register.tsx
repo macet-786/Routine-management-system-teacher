@@ -25,18 +25,20 @@ const Register: React.FC = () => {
       return
     }
 
-    // ✅ Save data in localStorage (simulate backend)
-    const teacherData = { fullName, email, employeeId, phone, specialization, password }
-    localStorage.setItem("teacherData", JSON.stringify(teacherData))
+    // ✅ Save teacher data in localStorage (same key as Login.tsx)
+    const teacher = { fullName, email, employeeId, phone, specialization, password }
+    localStorage.setItem("teacher", JSON.stringify(teacher))
 
     alert("Registered successfully! Please login now.")
-    navigate("/login") // Redirect to login page
+    navigate("/login") // Redirect to login
   }
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-green-50">
       <div className="bg-white p-8 rounded-2xl shadow-lg w-96">
-        <h2 className="text-2xl font-bold mb-6 text-center text-green-600">Teacher Register</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-green-600">
+          Teacher Register
+        </h2>
 
         <form onSubmit={handleRegister}>
           <input

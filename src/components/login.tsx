@@ -10,11 +10,15 @@ const Login: React.FC = () => {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Get stored teacher from localStorage
-    const teacher = JSON.parse(localStorage.getItem("teacher") || "{}");
+    // Get all teachers from localStorage (array)
+    const storedTeachers = JSON.parse(localStorage.getItem("teachers") || "[]");
 
-    // Validate credentials
-    if (teacher.email === email && teacher.password === password) {
+    // Find teacher that matches credentials
+    const teacher = storedTeachers.find(
+      (t: any) => t.email === email && t.password === password
+    );
+
+    if (teacher) {
       alert(`Welcome back, ${teacher.fullName}!`);
       localStorage.setItem("loggedInTeacher", JSON.stringify(teacher)); // save active session
       navigate("/dashboard"); // go to teacher dashboard
@@ -26,7 +30,9 @@ const Login: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-blue-50">
       <div className="bg-white p-8 rounded-2xl shadow-lg w-96">
-        <h2 className="text-2xl font-bold mb-6 text-center text-blue-600">Teacher Login</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-blue-600">
+          Teacher Login
+        </h2>
 
         <form onSubmit={handleLogin}>
           <input
@@ -53,7 +59,10 @@ const Login: React.FC = () => {
 
         <p className="mt-4 text-center text-gray-600">
           Don&apos;t have an account?{" "}
-          <Link to="/register" className="text-blue-600 font-semibold hover:underline">
+          <Link
+            to="/register"
+            className="text-blue-600 font-semibold hover:underline"
+          >
             Register
           </Link>
         </p>
